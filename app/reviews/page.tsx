@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { siteUrl } from "../site-paths";
 import ReviewCarousel from "./ReviewCarousel";
 
 const uberUrl =
@@ -10,6 +11,12 @@ const reviewsUrl =
 export const metadata: Metadata = {
   title: "Reviews | Bubblelicious Lab",
   description: "Read customer reviews of Bubblelicious Lab in Cherry Hill, New Jersey.",
+  alternates: { canonical: `${siteUrl}/reviews/` },
+  openGraph: {
+    title: "Reviews | Bubblelicious Lab",
+    description: "Read customer reviews of Bubblelicious Lab in Cherry Hill, New Jersey.",
+    url: `${siteUrl}/reviews/`,
+  },
 };
 
 export default function ReviewsPage() {

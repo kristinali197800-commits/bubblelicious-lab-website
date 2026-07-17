@@ -1,0 +1,8 @@
+:HL["/bubblelicious-lab-website/_next/static/chunks/01fmwh~xgkme..css","style"]
+:HL["/bubblelicious-lab-website/photos/uber-cover-1.jpg","image"]
+:HL["/bubblelicious-lab-website/photos/powder-test-tubes.jpg","image"]
+:HL["/bubblelicious-lab-website/photos/menu-2.webp","image"]
+:HL["/bubblelicious-lab-website/photos/customer-6.jpg","image"]
+:HL["/bubblelicious-lab-website/photos/menu-1.webp","image"]
+:HL["/bubblelicious-lab-website/photos/customer-hero.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"rarUjzak1dHbhH_t7OJBK"}

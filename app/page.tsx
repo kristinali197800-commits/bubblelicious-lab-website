@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { assetPath } from "./site-paths";
 
 const uberUrl =
   "https://www.ubereats.com/store/bubblelicious-lab/BQBu6StxTiCa3hSJDh299Q?srsltid=AfmBOopfNs-geJdFd9EmLvhnxwHqtQ6XdN_Efg_s4X4ew4oFkUiEMEra";
@@ -12,28 +13,28 @@ const categories = [
     code: "BASE 01",
     title: "Fruit Tea & Slush",
     note: "Flavor syringes make these fruit-forward bases easy to mix and match.",
-    image: "/photos/customer-6.jpg",
+    image: assetPath("/photos/customer-6.jpg"),
     tags: ["Lychee", "Mango", "Strawberry", "Green apple"],
   },
   {
     code: "BASE 02",
     title: "Bubble Milk Tea",
     note: "Choose two test-tube flavor powders, a sugar level, and your toppings.",
-    image: "/photos/menu-2.webp",
+    image: assetPath("/photos/menu-2.webp"),
     tags: ["Taro", "Thai", "Matcha", "Mocha"],
   },
   {
     code: "BASE 03",
     title: "Hot Milk Tea & Coffee Slush",
     note: "Hot milk tea uses one flavor powder; coffee slush lets you choose two.",
-    image: "/photos/uber-cover-1.jpg",
+    image: assetPath("/photos/uber-cover-1.jpg"),
     tags: ["Mocha", "Coffee", "Thai", "Taro"],
   },
   {
     code: "BASE 04",
     title: "Yogurt Drink",
     note: "Pair one fruit-flavor syringe with a yogurt container, then add toppings.",
-    image: "/photos/menu-1.webp",
+    image: assetPath("/photos/menu-1.webp"),
     tags: ["Lychee", "Strawberry", "Mango", "Peach"],
   },
 ];
@@ -102,14 +103,14 @@ export default function Home() {
 
         <div className="hero-visual" aria-label="Bubblelicious Lab drinks and flavor powders">
           <div className="photo photo-main">
-            <img src="/photos/uber-cover-1.jpg" alt="Colorful Bubblelicious Lab drinks and desserts" />
+            <img src={assetPath("/photos/uber-cover-1.jpg")} alt="Colorful Bubblelicious Lab drinks and desserts" />
           </div>
           <div className="photo photo-powders">
-            <img src="/photos/powder-test-tubes.jpg" alt="Rows of labeled flavor powders in test tubes at Bubblelicious Lab" />
+            <img src={assetPath("/photos/powder-test-tubes.jpg")} alt="Rows of labeled flavor powders in test tubes at Bubblelicious Lab" />
             <span className="photo-caption">flavor powder library</span>
           </div>
           <div className="photo photo-drink">
-            <img src="/photos/menu-2.webp" alt="Orange milk tea with popping bubbles" />
+            <img src={assetPath("/photos/menu-2.webp")} alt="Orange milk tea with popping bubbles" />
           </div>
           <div className="formula-sticker" aria-hidden="true">
             <span>C₈H₁₀N₄O₂</span>
@@ -197,7 +198,7 @@ export default function Home() {
 
       <section className="visit section" id="visit">
         <div className="visit-photo">
-          <img src="/photos/customer-hero.jpg" alt="Exterior of Bubblelicious Lab in Cherry Hill" />
+          <img src={assetPath("/photos/customer-hero.jpg")} alt="Exterior of Bubblelicious Lab in Cherry Hill" />
           <span>FZ 8 · The Point at Marlton</span>
         </div>
         <div className="visit-copy">

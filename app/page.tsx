@@ -8,52 +8,31 @@ const reviewsUrl =
 const categories = [
   {
     code: "BASE 01",
-    title: "Fruit Tea",
-    note: "Bright, refreshing, and built for mixing.",
+    title: "Fruit Tea & Slush",
+    note: "Flavor syringes make these fruit-forward bases easy to mix and match.",
     image: "/photos/customer-6.jpg",
     tags: ["Lychee", "Mango", "Strawberry", "Green apple"],
   },
   {
     code: "BASE 02",
-    title: "Milk Tea",
-    note: "Creamy, customizable, and great hot or iced.",
+    title: "Bubble Milk Tea",
+    note: "Choose two test-tube flavor powders, a sugar level, and your toppings.",
     image: "/photos/menu-2.webp",
     tags: ["Taro", "Thai", "Matcha", "Mocha"],
   },
   {
     code: "BASE 03",
-    title: "Fruit Slush",
-    note: "An icy canvas for your favorite flavor combo.",
-    image: "/photos/menu-1.webp",
-    tags: ["Peach", "Blueberry", "Pomegranate", "Passion fruit"],
+    title: "Hot Milk Tea & Coffee Slush",
+    note: "Hot milk tea uses one flavor powder; coffee slush lets you choose two.",
+    image: "/photos/uber-cover-1.jpg",
+    tags: ["Mocha", "Coffee", "Thai", "Taro"],
   },
   {
     code: "BASE 04",
     title: "Yogurt Drink",
-    note: "Tangy, smooth, and especially good with fruit.",
-    image: "/photos/customer-4.jpg",
+    note: "Pair one fruit-flavor syringe with a yogurt container, then add toppings.",
+    image: "/photos/menu-1.webp",
     tags: ["Lychee", "Strawberry", "Mango", "Peach"],
-  },
-];
-
-const reviews = [
-  {
-    quote:
-      "Owners are very friendly, enthusiastic, and helpful in explaining how to customize our drinks. It was our first time there...",
-    name: "Ashley S.",
-    detail: "Google review · 5 stars",
-  },
-  {
-    quote:
-      "The interior is super cute and I love the syringes of flavors and how you can mix and match. Strawberry and lychee fruit tea was super good!",
-    name: "Ashesh D.",
-    detail: "Google review · 5 stars",
-  },
-  {
-    quote:
-      "You start with taking a tray and pick your mix. You can mix and match, or do one flavor to go more traditional. Extremely fun design.",
-    name: "Teir",
-    detail: "Google Local Guide · 5 stars",
   },
 ];
 
@@ -73,7 +52,7 @@ export default function Home() {
         <nav aria-label="Primary navigation">
           <a href="#protocol">The protocol</a>
           <a href="#menu">Menu</a>
-          <a href="#reviews">Reviews</a>
+          <a href="/reviews">Reviews</a>
           <a href="#visit">Visit</a>
         </nav>
         <a className="button button-small" href={uberUrl} target="_blank" rel="noreferrer">
@@ -90,8 +69,8 @@ export default function Home() {
             Your <em>experiment.</em>
           </h1>
           <p className="hero-lede">
-            Pick a base, mix your flavor syringes, and finish with the toppings you love.
-            There is no wrong formula here.
+            Pick a base, choose the flavors made for that drink, and finish with the
+            toppings you love. There is no wrong formula here.
           </p>
           <div className="hero-actions">
             <a className="button" href={uberUrl} target="_blank" rel="noreferrer">
@@ -122,7 +101,7 @@ export default function Home() {
 
         <div className="hero-visual" aria-label="Inside Bubblelicious Lab and a fruit tea">
           <div className="photo photo-main">
-            <img src="/photos/customer-4.jpg" alt="Bubblelicious Lab wall with drinks" />
+            <img src="/photos/uber-cover-1.jpg" alt="Colorful Bubblelicious Lab drinks and desserts" />
           </div>
           <div className="photo photo-syringes">
             <img src="/photos/customer-3.jpg" alt="Rows of labeled flavor syringes" />
@@ -144,8 +123,8 @@ export default function Home() {
           <h2>A tea shop that acts like a lab.</h2>
           <p>
             Bubblelicious Lab makes bubble tea more fun by letting you build it yourself.
-            Grab a tray, choose a base, collect your flavor syringes, then make a drink that
-            is completely yours.
+            Grab a tray, choose a base, collect the matching flavor syringes or test-tube
+            powders, then make a drink that is completely yours.
           </p>
         </div>
         <div className="steps">
@@ -153,13 +132,13 @@ export default function Home() {
             <span className="step-number">01</span>
             <div className="step-icon cup-icon" aria-hidden="true">◯</div>
             <h3>Choose your base</h3>
-            <p>Fruit tea, milk tea, fruit slush, smoothie, yogurt drink, or something hot.</p>
+            <p>Fruit tea, bubble milk tea, hot milk tea, fruit slush, yogurt drink, or coffee slush.</p>
           </article>
           <article>
             <span className="step-number">02</span>
             <div className="step-icon syringe-icon" aria-hidden="true">↗</div>
-            <h3>Inject your flavors</h3>
-            <p>Pick your syringes and combine one classic flavor or an entirely new formula.</p>
+            <h3>Choose your flavors</h3>
+            <p>Fruit drinks use syrup syringes. Milk tea and coffee slush use flavor powders in test tubes.</p>
           </article>
           <article>
             <span className="step-number">03</span>
@@ -214,59 +193,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="gallery section" aria-labelledby="gallery-title">
-        <div className="section-heading compact-heading">
-          <p className="eyebrow">Field notes</p>
-          <h2 id="gallery-title">Created by curious people.</h2>
-        </div>
-        <div className="gallery-grid">
-          <figure className="gallery-tall">
-            <img src="/photos/customer-5.jpg" alt="Interior of Bubblelicious Lab" />
-          </figure>
-          <figure>
-            <img src="/photos/menu-3.webp" alt="Purple taro slush with popping bubbles" />
-          </figure>
-          <figure>
-            <img src="/photos/customer-6.jpg" alt="Customer-created pink fruit tea" />
-          </figure>
-          <figure className="gallery-wide">
-            <img src="/photos/uber-cover-1.jpg" alt="Colorful drinks, macarons and cake" />
-          </figure>
-          <span className="gallery-caption">Actual drinks & customer photos</span>
-        </div>
-      </section>
-
-      <section className="reviews section" id="reviews">
-        <div className="reviews-summary">
-          <p className="eyebrow">Peer review</p>
-          <div className="big-rating">4.9</div>
-          <div className="stars" aria-label="4.9 out of 5 stars">★★★★★</div>
-          <p>420 Google reviews</p>
-          <div className="rating-bars" aria-hidden="true">
-            <span><b>5</b><i style={{ width: "93%" }} /></span>
-            <span><b>4</b><i style={{ width: "18%" }} /></span>
-            <span><b>3</b><i style={{ width: "6%" }} /></span>
-          </div>
-          <a className="text-link" href={reviewsUrl} target="_blank" rel="noreferrer">
-            Read all Google reviews <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-        <div className="review-list">
-          {reviews.map((review, index) => (
-            <blockquote key={review.name}>
-              <span className="quote-mark" aria-hidden="true">“</span>
-              <p>{review.quote}</p>
-              <footer>
-                <span className={`review-avatar avatar-${index + 1}`} aria-hidden="true">
-                  {review.name.charAt(0)}
-                </span>
-                <span><strong>{review.name}</strong><small>{review.detail}</small></span>
-              </footer>
-            </blockquote>
-          ))}
-        </div>
-      </section>
-
       <section className="visit section" id="visit">
         <div className="visit-photo">
           <img src="/photos/customer-hero.jpg" alt="Exterior of Bubblelicious Lab in Cherry Hill" />
@@ -310,7 +236,7 @@ export default function Home() {
         <div className="footer-links">
           <a href="#protocol">The protocol</a>
           <a href="#menu">Menu</a>
-          <a href="#reviews">Reviews</a>
+          <a href="/reviews">Reviews</a>
           <a href="#visit">Visit</a>
         </div>
         <div className="footer-social">

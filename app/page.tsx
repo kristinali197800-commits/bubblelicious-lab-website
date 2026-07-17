@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const uberUrl =
   "https://www.ubereats.com/store/bubblelicious-lab/BQBu6StxTiCa3hSJDh299Q?srsltid=AfmBOopfNs-geJdFd9EmLvhnxwHqtQ6XdN_Efg_s4X4ew4oFkUiEMEra";
 const mapsUrl =
@@ -50,9 +52,8 @@ export default function Home() {
           </span>
         </a>
         <nav aria-label="Primary navigation">
-          <a href="#protocol">The protocol</a>
-          <a href="#menu">Menu</a>
-          <a href="/reviews">Reviews</a>
+          <Link href="/" aria-current="page">Home</Link>
+          <Link href="/reviews">Reviews</Link>
           <a href="#visit">Visit</a>
         </nav>
         <a className="button button-small" href={uberUrl} target="_blank" rel="noreferrer">
@@ -99,12 +100,13 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="hero-visual" aria-label="Inside Bubblelicious Lab and a fruit tea">
+        <div className="hero-visual" aria-label="Bubblelicious Lab drinks and flavor powders">
           <div className="photo photo-main">
             <img src="/photos/uber-cover-1.jpg" alt="Colorful Bubblelicious Lab drinks and desserts" />
           </div>
-          <div className="photo photo-syringes">
-            <img src="/photos/customer-3.jpg" alt="Rows of labeled flavor syringes" />
+          <div className="photo photo-powders">
+            <img src="/photos/powder-test-tubes.jpg" alt="Rows of labeled flavor powders in test tubes at Bubblelicious Lab" />
+            <span className="photo-caption">flavor powder library</span>
           </div>
           <div className="photo photo-drink">
             <img src="/photos/menu-2.webp" alt="Orange milk tea with popping bubbles" />
@@ -234,9 +236,8 @@ export default function Home() {
           <div><strong>Bubblelicious Lab</strong><small>Build your own happy.</small></div>
         </div>
         <div className="footer-links">
-          <a href="#protocol">The protocol</a>
-          <a href="#menu">Menu</a>
-          <a href="/reviews">Reviews</a>
+          <Link href="/">Home</Link>
+          <Link href="/reviews">Reviews</Link>
           <a href="#visit">Visit</a>
         </div>
         <div className="footer-social">

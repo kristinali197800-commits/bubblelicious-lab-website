@@ -52,10 +52,18 @@ const reviews = [
 
 export default function ReviewCarousel() {
   const [active, setActive] = useState(0);
+  const [direction, setDirection] = useState<"next" | "previous">("next");
   const review = reviews[active];
 
-  const move = (direction: number) => {
-    setActive((current) => (current + direction + reviews.length) % reviews.length);
+  const move = (amount: number) => {
+    setDirection(amount > 0 ? "next" : "previous");
+    setActive((current) => (current + amount + reviews.length) % reviews.length);
+  };
+
+  const selectReview = (index: number) => {
+    if (index === active) return;
+    setDirection(index > active ? "next" : "previous");
+    setActive(index);
   };
 
   return (
@@ -64,7 +72,8 @@ export default function ReviewCarousel() {
         <span>Review {String(active + 1).padStart(2, "0")}</span>
         <span>{String(reviews.length).padStart(2, "0")}</span>
       </div>
-      <blockquote key={review.name}>
+      <div className="review-slide-window">
+      <blockquote key={`${review.name}-${active}`} className={`review-slide review-slide-${direction}`}>
         <span className="quote-mark" aria-hidden="true">“</span>
         <p>{review.quote}</p>
         <footer>
@@ -72,6 +81,7 @@ export default function ReviewCarousel() {
           <span><strong>{review.name}</strong><small>{review.detail}</small></span>
         </footer>
       </blockquote>
+      </div>
       <div className="carousel-controls">
         <button type="button" onClick={() => move(-1)} aria-label="Previous review">←</button>
         <div className="review-dots" aria-label="Choose a review">
@@ -80,7 +90,7 @@ export default function ReviewCarousel() {
               type="button"
               key={item.name}
               className={index === active ? "active" : ""}
-              onClick={() => setActive(index)}
+              onClick={() => selectReview(index)}
               aria-label={`Show review ${index + 1}`}
               aria-current={index === active ? "true" : undefined}
             />

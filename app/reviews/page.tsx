@@ -21,8 +21,7 @@ export default function ReviewsPage() {
           <span><strong>Bubblelicious Lab</strong><small>Cherry Hill, New Jersey</small></span>
         </Link>
         <nav aria-label="Primary navigation">
-          <Link href="/#protocol">The protocol</Link>
-          <Link href="/#menu">Menu</Link>
+          <Link href="/">Home</Link>
           <Link href="/reviews" aria-current="page">Reviews</Link>
           <Link href="/#visit">Visit</Link>
         </nav>
@@ -68,8 +67,7 @@ export default function ReviewsPage() {
         </div>
         <div className="footer-links">
           <Link href="/">Home</Link>
-          <Link href="/#protocol">The protocol</Link>
-          <Link href="/#menu">Menu</Link>
+          <Link href="/reviews">Reviews</Link>
           <Link href="/#visit">Visit</Link>
         </div>
         <div className="footer-social">

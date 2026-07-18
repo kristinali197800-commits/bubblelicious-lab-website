@@ -1,2 +1,2 @@
-:HL["/bubblelicious-lab-website/_next/static/chunks/0vm1gs_bqv8-v.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"reviews","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"ciwX3dHI2krg_eOKlClj-"}
+:HL["/bubblelicious-lab-website/_next/static/chunks/0~atsjwg3leaq.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"reviews","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"A0uyRJj8jLUb5LyJYpQCZ"}

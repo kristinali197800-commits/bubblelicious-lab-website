@@ -109,6 +109,10 @@ export default function Home() {
             <img src={assetPath("/photos/powder-test-tubes.jpg")} alt="Rows of labeled flavor powders in test tubes at Bubblelicious Lab" />
             <span className="photo-caption">flavor powder library</span>
           </div>
+          <div className="photo photo-syringes">
+            <img src={assetPath("/photos/syringe-recipes.jpg")} alt="Labeled flavor syrup syringes and create-your-own tea instructions at Bubblelicious Lab" />
+            <span className="photo-caption">syringe recipe station</span>
+          </div>
           <div className="photo photo-drink">
             <img src={assetPath("/photos/menu-2.webp")} alt="Orange milk tea with popping bubbles" />
           </div>

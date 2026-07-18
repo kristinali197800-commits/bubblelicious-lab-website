@@ -202,8 +202,20 @@ export default function Home() {
 
       <section className="visit section" id="visit">
         <div className="visit-photo">
-          <img src={assetPath("/photos/customer-hero.jpg")} alt="Exterior of Bubblelicious Lab in Cherry Hill" />
-          <span>FZ 8 · The Point at Marlton</span>
+          <a
+            className="visit-photo-main"
+            href="https://www.instagram.com/p/CexQhHxM-4b/?img_index=1"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="View the Bubblelicious Lab wall art on Instagram"
+          >
+            <img src={assetPath("/photos/instagram-wall.jpg")} alt="Colorful hand-painted Bubblelicious Lab wall with illustrated bubble tea cups" />
+          </a>
+          <div className="visit-photo-inset">
+            <img src={assetPath("/photos/customer-hero.jpg")} alt="Exterior of Bubblelicious Lab in Cherry Hill" />
+            <span>FZ 8 · The Point at Marlton</span>
+          </div>
+          <span className="visit-photo-label">inside the lab · via Instagram</span>
         </div>
         <div className="visit-copy">
           <p className="eyebrow">Lab location</p>

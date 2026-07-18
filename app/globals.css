@@ -250,8 +250,14 @@ h1 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.02e
 }
 
 .visit { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 8vw, 120px); background: var(--paper); }
-.visit-photo { position: relative; min-height: 620px; border: 2px solid var(--ink); box-shadow: 10px 10px 0 var(--coral); transform: rotate(-1.5deg); overflow: hidden; }
-.visit-photo span { position: absolute; left: 16px; bottom: 16px; padding: 10px 12px; border: 1px solid var(--ink); background: var(--acid); font: 10px "Courier New", monospace; }
+.visit-photo { position: relative; min-height: 620px; border: 2px solid var(--ink); box-shadow: 10px 10px 0 var(--coral); transform: rotate(-1.5deg); overflow: hidden; background: var(--paper); }
+.visit-photo-main { position: absolute; inset: 0; overflow: hidden; }
+.visit-photo-main img { transition: transform .5s cubic-bezier(.22, 1, .36, 1); }
+.visit-photo-main:hover img { transform: scale(1.025); }
+.visit-photo-inset { position: absolute; z-index: 2; right: 18px; bottom: 18px; width: 43%; height: 34%; border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); overflow: hidden; transform: rotate(2deg); }
+.visit-photo-inset span, .visit-photo-label { position: absolute; z-index: 3; padding: 8px 10px; border: 1px solid var(--ink); background: var(--acid); font: 8px "Courier New", monospace; letter-spacing: .04em; text-transform: uppercase; }
+.visit-photo-inset span { left: 7px; bottom: 7px; }
+.visit-photo-label { left: 16px; top: 16px; }
 .visit-copy { display: flex; flex-direction: column; justify-content: center; }
 .visit-details { display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 45px; border-top: 1px solid var(--ink); }
 .visit-details > div { min-height: 145px; padding: 20px 20px 20px 0; border-bottom: 1px solid var(--line); }
@@ -399,7 +405,10 @@ h1 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.02e
   .review-topics span { padding: 8px 10px; font-size: 8px; }
   .visit { gap: 44px; }
   .visit-photo { min-height: 300px; border-width: 1px; box-shadow: 6px 6px 0 var(--coral); }
-  .visit-photo span { left: 10px; bottom: 10px; padding: 7px 8px; font-size: 7px; }
+  .visit-photo-inset { right: 10px; bottom: 10px; width: 44%; height: 35%; border-width: 1px; box-shadow: 4px 4px 0 var(--ink); }
+  .visit-photo-inset span, .visit-photo-label { padding: 6px 7px; border-width: 1px; font-size: 6px; }
+  .visit-photo-inset span { left: 5px; bottom: 5px; }
+  .visit-photo-label { left: 10px; top: 10px; }
   .visit-details { grid-template-columns: repeat(2, 1fr); margin-top: 28px; }
   .visit-details > div { min-height: 112px; padding: 14px 12px 14px 0; }
   .visit-details > div:nth-child(odd) { border-right: 1px solid var(--line); }

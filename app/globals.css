@@ -149,7 +149,7 @@ h1 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.02e
 .photo { position: absolute; overflow: hidden; border: 2px solid var(--ink); box-shadow: 8px 8px 0 var(--ink); background: white; }
 .photo-main { inset: 8% 9% 10% 12%; transform: rotate(2deg); }
 .photo-main img { object-position: center; }
-.photo-powders { width: 36%; height: 31%; left: 2%; top: 4%; transform: rotate(-6deg); }
+.photo-powders { z-index: 2; width: 48%; height: 40%; left: 1%; top: 3%; transform: rotate(-6deg); }
 .photo-drink { width: 33%; height: 35%; right: 3%; bottom: 3%; transform: rotate(7deg); }
 .photo-caption { position: absolute; left: 8px; bottom: 8px; padding: 7px 9px; border: 1px solid var(--ink); background: var(--acid); font: 8px "Courier New", monospace; letter-spacing: .08em; text-transform: uppercase; }
 .formula-sticker { position: absolute; right: 7%; top: 9%; display: grid; place-items: center; width: 120px; aspect-ratio: 1; border: 2px solid var(--ink); border-radius: 50%; background: var(--acid); font-family: "Courier New", monospace; transform: rotate(8deg); }
@@ -329,7 +329,7 @@ h1 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.02e
   .hero-visual { min-height: 390px; }
   .photo { border-width: 1px; box-shadow: 5px 5px 0 var(--ink); }
   .photo-main { inset: 8% 7% 10% 11%; }
-  .photo-powders { width: 40%; height: 30%; left: 2%; top: 4%; }
+  .photo-powders { width: 50%; height: 38%; left: 1%; top: 3%; }
   .photo-drink { width: 35%; height: 32%; right: 3%; bottom: 3%; }
   .photo-caption { left: 5px; bottom: 5px; padding: 5px 6px; font-size: 6px; }
   .formula-sticker { width: 68px; border-width: 1px; }

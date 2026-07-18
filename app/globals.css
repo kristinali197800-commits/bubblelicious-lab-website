@@ -63,6 +63,33 @@ button, a { -webkit-tap-highlight-color: transparent; }
   to { opacity: 1; scale: 1; }
 }
 
+.scroll-motion .scroll-reveal-target {
+  opacity: 0;
+  filter: blur(3px);
+  transform: translate3d(0, 58px, 0) scale(.985);
+  transition:
+    opacity .82s cubic-bezier(.22, 1, .36, 1),
+    filter .82s cubic-bezier(.22, 1, .36, 1),
+    transform .82s cubic-bezier(.22, 1, .36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, filter, transform;
+}
+.scroll-motion .scroll-reveal-target.reveal-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0) scale(1);
+}
+.scroll-motion .steps article:nth-child(2),
+.scroll-motion .menu-card:nth-child(even),
+.scroll-motion .review-topics span:nth-child(even) {
+  transform: translate3d(26px, 58px, 0) rotate(.5deg) scale(.985);
+}
+.scroll-motion .steps article:nth-child(2).reveal-visible,
+.scroll-motion .menu-card:nth-child(even).reveal-visible,
+.scroll-motion .review-topics span:nth-child(even).reveal-visible {
+  transform: translate3d(0, 0, 0) rotate(0) scale(1);
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -236,18 +263,6 @@ h1 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.02e
 .review-topics > div { display: flex; flex-wrap: wrap; gap: 12px; }
 .review-topics span { padding: 12px 16px; border: 1px solid var(--ink); border-radius: 99px; background: var(--paper); font: 11px "Courier New", monospace; }
 .reviews-footer { background: var(--ink); }
-
-@supports (animation-timeline: view()) {
-  .protocol, .menu, .visit, .review-topics {
-    animation: section-reveal linear both;
-    animation-timeline: view();
-    animation-range: entry 3% cover 24%;
-  }
-  @keyframes section-reveal {
-    from { opacity: .15; transform: translateY(44px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-}
 
 .visit { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(40px, 8vw, 120px); background: var(--paper); }
 .visit-photo { position: relative; min-height: 620px; border: 2px solid var(--ink); box-shadow: 10px 10px 0 var(--coral); transform: rotate(-1.5deg); overflow: hidden; background: var(--paper); }
@@ -423,9 +438,11 @@ h1 em::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.02e
   .footer-brand { grid-column: 1 / -1; }
   .footer-links, .footer-social { gap: 8px; font-size: 10px; }
   .footer-note { grid-column: 1 / -1; margin-top: 8px; padding-top: 14px; font-size: 7px; }
-  @supports (animation-timeline: view()) {
-    .protocol, .menu, .visit, .review-topics { animation: none; }
-  }
+  .scroll-motion .scroll-reveal-target { transform: translate3d(0, 30px, 0) scale(.99); transition-duration: .68s; }
+  .scroll-motion .steps article:nth-child(2),
+  .scroll-motion .menu-card:nth-child(even),
+  .scroll-motion .review-topics span:nth-child(even) { transform: translate3d(12px, 30px, 0) scale(.99); }
+  .scroll-motion .scroll-reveal-target.reveal-visible { transform: translate3d(0, 0, 0) scale(1); }
 }
 
 @media (max-width: 360px) {

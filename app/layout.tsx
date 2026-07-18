@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { siteUrl } from "./site-paths";
+import ScrollReveal from "./ScrollReveal";
 
 const title = "Bubblelicious Lab | Build Your Own Bubble Tea in Cherry Hill";
 const description =
@@ -36,7 +37,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ScrollReveal />
+        {children}
+      </body>
     </html>
   );
 }
